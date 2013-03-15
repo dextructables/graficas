@@ -3,7 +3,7 @@ namespace Graficas;
 
 use Graficas\Providers\DataInterface;
 
-class Grafica
+abstract class Grafica
 {
     protected $width;
     protected $height;
@@ -53,9 +53,6 @@ class Grafica
         $this->shadowSettings = array('X'=>1,'Y'=>1,'R'=>0,'G'=>0,'B'=>0,'Alpha'=>10);
         $this->borderSettings = array('R'=>0,'G'=>0,'B'=>0);
         $this->fontSettings   = array('FontName'=> $this->fontPath . '/pf_arma_five.ttf', 'FontSize'=>6);
-        $this->chartSettings  = array('Surrounding'=>-30,'InnerSurrounding'=>30,'Interleave'=>0.2,
-                                      'Draw0Line' => true, 'DisplayValues' => true
-                                );
 
         $this->addSeries();
         $this->setXAxis();
@@ -149,12 +146,9 @@ class Grafica
 
     protected function setShadow()
     {
-        $this->image->setShadow(true, $this->shadowSettings);
+        $this->image->setShadow( true, $this->shadowSettings);
     }
 
-    protected function drawChart()
-    {
-        $this->image->drawBarChart($this->chartSettings); 
-    }
+    abstract protected function drawChart();
 
 }
