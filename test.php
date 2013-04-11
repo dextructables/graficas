@@ -9,5 +9,5 @@ try {
 
 
 $s = new \Graficas\Providers\ArrayProvider();
-$g = new \Graficas\GraficaLineas(800,600, $f);
+$g = new \Graficas\GraficaBarras(750, 600, $f);
 $g->draw();

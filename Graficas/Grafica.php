@@ -29,7 +29,7 @@ abstract class Grafica
         $this->height       = $height;
         $this->data         = new \pData();
         $this->border       = 1;
-        $this->padding      = 70;
+        $this->padding      = $this->width * 0.08;
         $this->headerHeight = 0;
         $this->image        = new \pImage($width, $height);
         $this->series       = $provider->getData();
@@ -146,7 +146,7 @@ abstract class Grafica
 
     protected function setShadow()
     {
-        $this->image->setShadow( true, $this->shadowSettings);
+        $this->image->setShadow(true, $this->shadowSettings);
     }
 
     abstract protected function drawChart();
