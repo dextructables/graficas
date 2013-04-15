@@ -9,7 +9,7 @@ class ArrayProvider implements DataInterface
         return array(
 
             array(
-                'titulo' => 'Months',
+                'titulo' => 'Meses',
                 'valores' => array('Enero','Febrero','Marzo','Abril','Mayo','Junio',
                                    'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre')
                 ),
