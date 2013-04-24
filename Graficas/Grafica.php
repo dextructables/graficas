@@ -65,7 +65,7 @@ abstract class Grafica
         $this->bgSettings['Dash'] = $withBorder;
     }
 
-    public function draw()
+    public function save($imagePath)
     {
         $this->drawBackground();
         $this->drawOverlay();
@@ -75,7 +75,7 @@ abstract class Grafica
         $this->drawScale();
         $this->setShadow();
         $this->drawChart();
-        $this->image->Stroke();    
+        $this->image->Render($imagePath); 
     }
 
     public function setBgColor($R, $G, $B)
