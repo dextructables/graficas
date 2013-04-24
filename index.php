@@ -18,19 +18,22 @@
         <img id="target" src="img/random.jpg" />  
      <script src="librerias/jquery.js"></script>
      <script>
-         $(function(){source
+         $(function(){
              $('.loader').on('click', function(e){
                  e.preventDefault();
                  $.ajax({
-                 type: 'GET',
-                 dataType: 'json',
-                 cache: false,
-                 url: 'graficar.php',
-                 data: $('#forma').serialize()
-                 }).done(function( data ) {
-                     $('#target').attr('src', data.path);
+                 type:'GET',
+                 dataType:'json',
+                 cache:false,
+                 url:'graficar.php',
+                 data: $('#forma').serialize(),
+                 success: function(data, status){
+                     if (data.error == 0) { 
+                         $('#target').attr('src', data.path);
+                     }
+                 }
                  });
-                 });
+             });
          });
      </script>
     </body>

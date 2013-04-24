@@ -2,6 +2,8 @@
 require './librerias/idiorm/idiorm.php';
 require 'autoloader.php';
 
+header('Content-Type: application/json; charset=utf-8');
+
 $graphType    = (int)$_GET['type'];
 $dataSource   = (int)$_GET['source'];
 
@@ -40,7 +42,7 @@ if ($results['error'] == 0) {
     $graphClass        = $graphTypes[$graphType];
     $dataProviderClass = new ReflectionClass($dataProviders[$dataSource]);
     $dataProvider      = $dataProviderClass->newInstanceArgs($args[$dataSource]);
-    $graph             = new $graphClass(800, 600, $dataProvider);
+    $graph             = new $graphClass(700, 400, $dataProvider);
     $graph->save($rutaImagen);
     
     $results['message'] = 'imagen generada correctamente';
