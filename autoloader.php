@@ -1,5 +1,5 @@
 <?php
-/* Autoloader para las clases de pGraph */
+/* Autoloader para las clases de pChart */
 spl_autoload_register(function($class){
     $file = __DIR__ . '/librerias/pchart/class/' . $class . '.class.php';
     if (file_exists($file)) {

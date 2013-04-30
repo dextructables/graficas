@@ -27,10 +27,7 @@ $args          = array(1 => array(),
                        3 => array('datos/visitas.txt')
                       );
 
-$results = array('error'  => 0,
-                 'message' => '',
-                 'path'    => ''
-                 );
+$results = array('error'  => 0, 'message' => '', 'path'    => '');
 
 if (!array_key_exists($graphType, $graphTypes) || !array_key_exists($dataSource, $dataProviders)) {
     $results['error']   = 1;

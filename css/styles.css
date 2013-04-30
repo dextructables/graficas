@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#container{
+
+    width: 700px;
+    height: 410px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#image{
+
+    width: 700px;
+    height: 400px;
+    margin-top: 10px;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+ #container label:nth-child(n+2)
+{
+    margin-top: 5px;
+}
+
+input[type="radio"]{
+    margin: 5px;
+}
+
+.loading{
+    background: url('spinner.gif') center center no-repeat;
+}
+
+.loader{
+    width: 120px;
+    padding: 1px;   
+    display: block;
+    background: #0D7290;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    float: right;
+}
