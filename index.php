@@ -21,7 +21,7 @@
             <div id="image">
             </div>
         </div>
-     <script src="librerias/jquery.js"></script>
+     <script src="librerias/jquery/jquery.js"></script>
      <script>
          $(function(){
 
