@@ -31,7 +31,6 @@ abstract class Grafica
         $this->border       = 1;
         $this->padding      = $this->width * 0.08;
         $this->headerHeight = 0;
-        $this->image        = new \pImage($width, $height);
         $this->series       = $provider->getData();
         $this->fontPath     = realpath( __DIR__ . '/../librerias/pchart/fonts');
 
