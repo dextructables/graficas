@@ -1,18 +1,12 @@
 <?php
 namespace Graficas\Providers;
 
-use Graficas\Exception\InvalidFileException;
-
 class FileProvider implements DataInterface
 {
     protected $filePath;
 
     public function __construct($filePath)
     {
-        if (!is_file($filePath) || !is_readable($filePath)) {
-            throw new InvalidFileException('El archivo proporcionado no existe ó no es válido', 1);  
-        }
-
         $this->filePath = $filePath;
     }
 
