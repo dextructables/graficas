@@ -25,7 +25,7 @@
      <script>
          $(function(){
 
-             var grafica = $('<img/>',{id:'target'});
+             var grafica = $('<img/>');
              var imagen  = $('#image');
 
              $('.loader').on('click', function(e){
